@@ -36,8 +36,9 @@
     </section>
     <section class="container">
       <h3>Class List</h3>
+      <p><input type="text" ng-model="test"></p>
       <ul class="list-group">
-        <li class="list-group-item" ng-repeat="thing in sigmanaut.people"> <!-- What needs to be repeated? -->
+        <li class="list-group-item" ng-repeat="thing in sigmanaut.people | filter:test"> <!-- What needs to be repeated? -->
           <!-- TODO: Create a list item for everyone in the class -->
           <a ng-href="http://www.github.com/{{thing.git_username}}">{{thing.firstName}} {{thing.lastName}}</a> - {{thing.shoutout}}<!-- include the other parameters for the person -->
         </li>
