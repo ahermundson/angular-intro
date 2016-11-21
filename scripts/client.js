@@ -17,7 +17,6 @@ sigmanautApp.controller('SigmanautController', function(){
   self.newPerson = {};
 
   self.createPerson = function(){
-    console.log(self.newPerson);
     self.people.push(angular.copy(self.newPerson));
   };
 
